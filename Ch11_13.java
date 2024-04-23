@@ -26,7 +26,7 @@ class Circle extends Sphere{       // 請完成這個部分的程式碼
     }
 }
 
-public class Ch11_12 {
+public class Ch11_13 {
     public static void main(String[] args) {
         Circle c1=new Circle(8,6,2);
         c1.showData();
