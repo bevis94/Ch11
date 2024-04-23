@@ -1,21 +1,14 @@
-interface iShape{
-    public void show(); 
-    public int area();         // 計算面積  
+interface iShape{      
+    public void show();     
+    public int area(); 
 }
-
-class Color{
-    String color;
-    public Color(){
-
-    }
-    public Color(String s){
-        color = s;
-    }
+interface iColor{   
+    public void showColor();
 }
-
-class Win extends Color implements iShape{
+class Win implements iShape, iColor{
     int width;
     int height;
+    String color;
     public Win(){
 
     }
@@ -23,6 +16,9 @@ class Win extends Color implements iShape{
         width = w;
         height = h;
         color = s;
+    }
+    public void showColor(){
+        System.out.println("color="+color);
     }
     public int area(){
         return width * height;
@@ -35,9 +31,9 @@ class Win extends Color implements iShape{
     }
 }
 
-public class Ch11_6 {
+public class Ch11_9 {
     public static void main(String[] args) {
-        Win w=new Win(5,7,"Red");
+        Win w=new Win(5,7,"Green");
         w.show();
     }
 }
